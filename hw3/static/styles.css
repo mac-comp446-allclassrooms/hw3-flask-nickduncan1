@@ -1,0 +1,15 @@
+/* this is temporary */
+
+table, th, td {
+	border: 1px solid;
+}
+
+table {
+	margin: auto;
+	width: 75%;
+}
+
+th {
+	background-color: hotpink;
+}
+tr:nth-child(even){background-color: pink;}

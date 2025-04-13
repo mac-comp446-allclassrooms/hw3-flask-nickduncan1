@@ -1,0 +1,27 @@
+{% include 'template.html' %}
+{% block body %}
+
+<h3><a href='/create/'>Write a new review!</a></h3>
+
+<table>
+	<tr>
+		<th>Title</th><th>Rating</th>
+	</tr>
+	{% for review in reviews %}
+	<tr>
+		<td><a href='/review/{{review.id}}'>{{review.title}}</a></td>
+		<td>{% for i in range(review.rating) %} &#11088 {% endfor %}</td>
+		<td><a href='/edit/{{review.id}}'><button>Edit</button></a></td>
+		<td><a href='/delete/{{review.id}}'><button>Delete</button></a></td>
+	</tr>
+	{% endfor %}
+</table>
+
+<p>Resources used:</p>
+<ul>
+	<li><a href='https://www.geeksforgeeks.org/how-to-use-css-in-python-flask/'>geeksforgeeks css flask</a></li>
+	<li><a href='https://www.geeksforgeeks.org/flask-rendering-templates/'>geeksforgeeks flask templates</a></li>
+	<li><a href='https://www.w3schools.com/csS/css_align.asp'>w3schools css centering</a></li>
+	<li><a href='https://www.w3schools.com/Css/css_table.asp'>w3schools css table</a></li>
+</ul>
+{% endblock %}
